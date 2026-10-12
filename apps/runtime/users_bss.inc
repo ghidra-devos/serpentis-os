@@ -1,0 +1,2 @@
+users_text rb USERS_TEXT_MAX
+users_field rb USERS_FIELD_MAX

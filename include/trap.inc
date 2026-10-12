@@ -1,0 +1,45 @@
+; layout of the frame every interrupt and syscall stub builds on the kernel stack: the 15
+; general registers (pushed by the stub), vector, error code, then what the cpu pushed
+
+TRAP_RAX = 0
+TRAP_RBX = 8
+TRAP_RCX = 16
+TRAP_RDX = 24
+TRAP_RSI = 32
+TRAP_RDI = 40
+TRAP_RBP = 48
+TRAP_R8 = 56
+TRAP_R9 = 64
+TRAP_R10 = 72
+TRAP_R11 = 80
+TRAP_R12 = 88
+TRAP_R13 = 96
+TRAP_R14 = 104
+TRAP_R15 = 112
+
+TRAP_VECTOR = 120
+TRAP_ERROR = 128                ; 0 for vectors without one, the stubs push it so the frame never changes shape
+
+TRAP_RIP = 136
+TRAP_CS = 144
+TRAP_RFLAGS = 152
+TRAP_USER_RSP = 160
+TRAP_USER_SS = 168
+
+TRAP_GPR_BYTES = 120
+TRAP_NORMALIZED_BYTES = 136
+TRAP_KERNEL_FRAME_BYTES = 160
+TRAP_USER_FRAME_BYTES = 176
+
+TRAP_VECTOR_DIVIDE = 0
+TRAP_VECTOR_INVALID_OPCODE = 6
+TRAP_VECTOR_GENERAL_PROTECTION = 13
+TRAP_VECTOR_PAGE_FAULT = 14
+TRAP_VECTOR_IRQ0 = 32
+TRAP_VECTOR_IRQ1 = 33
+TRAP_VECTOR_IRQ12 = 44
+TRAP_VECTOR_SYSCALL = 0x80
+
+TRAP_CS_RPL_MASK = 3
+TRAP_RPL_KERNEL = 0
+TRAP_RPL_USER = 3
