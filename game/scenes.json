@@ -1,0 +1,47 @@
+{
+  "start": "outside",
+  "scenes": {
+    "outside": {
+      "image": "outside.png",
+      "hotspots": [
+        {"rect": [532, 62, 612, 104], "say": ["a ufo. i knew it", "they keep zapping my hat. the hat wins every time", "if they want my source code they can ask nicely"]},
+        {"rect": [12, 2, 116, 104], "say": ["the sun. way too bright for someone who writes asm at night", "it has a face. i drew it like that"]},
+        {"rect": [142, 12, 282, 72], "say": ["a cloud. looks like a floppy disk", "or a sheep. hard to say"]},
+        {"rect": [392, 0, 532, 58], "say": ["this one looks like a segfault"]},
+        {"rect": [458, 20, 492, 128], "say": ["smoke. someone left the oven on", "it was me"]},
+        {"rect": [384, 206, 424, 284], "say": ["home"], "goto": "livingroom"},
+        {"rect": [310, 172, 358, 218], "say": ["the living room. the mouse is in there again"]},
+        {"rect": [444, 172, 492, 218], "say": ["thats my room. i left the lamp on"]},
+        {"rect": [526, 194, 592, 294], "say": ["a letter. please stop writing everything in assembly", "no name on it. probably the aliens"], "once": true},
+        {"rect": [202, 146, 292, 282], "say": ["hi. thats me", "the hat stays on. always"]},
+        {"rect": [92, 100, 218, 294], "say": ["an apple tree. no i am not climbing it, i dont have arms"]},
+        {"rect": [52, 312, 232, 398], "say": ["my tail. please dont step on it"]}
+      ]
+    },
+    "livingroom": {
+      "image": "livingroom.png",
+      "hotspots": [
+        {"rect": [492, 242, 552, 294], "say": ["the mouse wants cheese", "i only have a usb mouse. not the same thing, he says", "he moved in last week. pays no rent"]},
+        {"rect": [482, 232, 562, 296], "say": ["his house. smaller than mine but no ufos in it"]},
+        {"rect": [420, 122, 604, 202], "say": ["he asks this every single time"]},
+        {"rect": [136, 90, 328, 158], "say": ["i said hi. he never says hi back"]},
+        {"rect": [20, 102, 100, 292], "say": ["back out to the yard"], "goto": "outside"},
+        {"rect": [158, 38, 256, 116], "say": ["know your enemy"]},
+        {"rect": [340, 28, 404, 92], "say": ["3 am. perfect time for asm, going to my room"], "goto": "room"},
+        {"rect": [262, 122, 362, 252], "say": ["shh. we are talking about the cheese"]},
+        {"rect": [172, 324, 412, 382], "say": ["i lost a semicolon under this rug once", "fasm doesnt need them anyway"]},
+        {"rect": [112, 252, 312, 392], "say": ["yes all of that is me"]}
+      ]
+    },
+    "room": {
+      "image": "room.png",
+      "hotspots": [
+        {"rect": [52, 32, 164, 128], "say": ["the moon. no ufos tonight", "wait, was that a light?", "nope. just a star"]},
+        {"rect": [274, 332, 390, 386], "say": ["my notes. half of it is register names", "page two just says rax rbx rcx rdx over and over"]},
+        {"rect": [440, 220, 557, 388], "say": ["the only lamp in the house i trust", "click. click. ok it still works"]},
+        {"rect": [222, 92, 327, 232], "say": ["ok enough for tonight, back downstairs"], "goto": "livingroom"},
+        {"rect": [82, 232, 272, 402], "say": ["yes im that long"]}
+      ]
+    }
+  }
+}
